@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq4ufd75ik76"]
+
+[ext_resource type="Texture2D" uid="uid://cw42q5011jxi7" path="res://ASSET/IMAGE/pixil-frame-0-2.png" id="1_7se0s"]
+[ext_resource type="PackedScene" uid="uid://b3yfxv4mwpd0e" path="res://ASSET/SCEEN/player.tscn" id="2_oerlu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oerlu"]
+texture = ExtResource("1_7se0s")
+texture_region_size = Vector2i(100, 100)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-50, -50, 50, -50, 50, 50, -50, 50)
+
+[sub_resource type="TileSet" id="TileSet_cqi5s"]
+tile_size = Vector2i(100, 100)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_oerlu")
+
+[node name="area1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(1, 0)
+tile_set = SubResource("TileSet_cqi5s")
+format = 2
+layer_0/tile_data = PackedInt32Array(327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327692, 0, 0, 327691, 0, 0, 262154, 0, 0, 196618, 0, 0, 262155, 0, 0, 196619, 0, 0, 131083, 0, 0, 262153, 0, 0)
+
+[node name="player" parent="." instance=ExtResource("2_oerlu")]
