@@ -20,15 +20,14 @@ position_smoothing_speed = 8.0
 
 [node name="animation" type="Node2D" parent="."]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="animation"]
-root_node = NodePath("../../Camera2D")
-
 [node name="Sprite2D" type="Sprite2D" parent="animation"]
 position = Vector2(12.249996, 17.000008)
 scale = Vector2(0.75499994, 0.88)
 texture = ExtResource("2_dptqk")
 region_enabled = true
 region_rect = Rect2(0, 0, 100, 300)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="animation"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(14, 21)
