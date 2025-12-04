@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6un5a1akkndo"]
+
+[ext_resource type="Script" uid="uid://h56de615qi1j" path="res://ASSET/SCRIPT/main_menu.gd" id="1_8qb88"]
+[ext_resource type="Texture2D" uid="uid://cdfnnngeldvqf" path="res://ASSET/IMAGE/newmainmenu..png" id="2_h6p4v"]
+[ext_resource type="Texture2D" uid="uid://mrlw07i05rcr" path="res://ASSET/IMAGE/pixil-frame-0 (1).png" id="3_23i1o"]
+[ext_resource type="Texture2D" uid="uid://bvsyreg3yvpob" path="res://ASSET/IMAGE/quit-frame.png" id="4_8qnmo"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8qb88")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(619, 396)
+scale = Vector2(12.38, 7.9)
+texture = ExtResource("2_h6p4v")
+
+[node name="Play" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 382.0
+offset_right = 176.0
+offset_bottom = 482.0
+scale = Vector2(3.599338, 3.6559503)
+texture_normal = ExtResource("3_23i1o")
+
+[node name="Quit" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 626.0
+offset_top = 386.00003
+offset_right = 726.0
+offset_bottom = 486.00003
+scale = Vector2(3.9100604, 3.5280533)
+texture_normal = ExtResource("4_8qnmo")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

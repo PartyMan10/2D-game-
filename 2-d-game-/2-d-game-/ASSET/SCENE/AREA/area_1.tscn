@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cw42q5011jxi7" path="res://ASSET/IMAGE/pixil-frame-0-2.png" id="1_7se0s"]
 [ext_resource type="Texture2D" uid="uid://c1nou4cb3mxfl" path="res://ASSET/IMAGE/pixil-frame-0-4 copy.png" id="2_b4baf"]
-[ext_resource type="PackedScene" uid="uid://b3yfxv4mwpd0e" path="res://ASSET/SCEEN/player.tscn" id="2_oerlu"]
+[ext_resource type="PackedScene" uid="uid://b3yfxv4mwpd0e" path="res://ASSET/SCENE/player.tscn" id="2_oerlu"]
 [ext_resource type="Texture2D" uid="uid://bc2ymgau264qu" path="res://ASSET/IMAGE/pixil-frame-0-4 copy 2.png" id="4_rhffh"]
 [ext_resource type="Texture2D" uid="uid://b6w75kjysp5nr" path="res://ASSET/IMAGE/pixil-frame-0-4 copy 3.png" id="5_b4baf"]
 [ext_resource type="Texture2D" uid="uid://c42t8intngxxw" path="res://ASSET/IMAGE/pixil-frame-0-4 copy 4.png" id="6_qq08a"]
