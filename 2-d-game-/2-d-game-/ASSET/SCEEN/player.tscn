@@ -4,16 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://dsv6bjh4pwmxg" path="res://ASSET/CHARACTER/idle.animation copy.png" id="2_dptqk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6njfy"]
-radius = 24.0
-height = 320.0
+radius = 27.0
+height = 250.0
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(0, -10)
 script = ExtResource("1_dptqk")
+speed = 20.0
+Jump_power = 5.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -15)
-zoom = Vector2(0.9, 0.9)
+zoom = Vector2(0.8, 0.8)
+position_smoothing_speed = 8.0
 
 [node name="animation" type="Node2D" parent="."]
 
@@ -21,12 +24,12 @@ zoom = Vector2(0.9, 0.9)
 root_node = NodePath("../../Camera2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="animation"]
-position = Vector2(-2.499999, 4.5000153)
-scale = Vector2(0.95000005, 1.0300001)
+position = Vector2(12.249996, 17.000008)
+scale = Vector2(0.75499994, 0.88)
 texture = ExtResource("2_dptqk")
 region_enabled = true
 region_rect = Rect2(0, 0, 100, 300)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(14, 21)
 shape = SubResource("CapsuleShape2D_6njfy")
