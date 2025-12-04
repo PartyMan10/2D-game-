@@ -1,7 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3yfxv4mwpd0e"]
+[gd_scene load_steps=10 format=3 uid="uid://b3yfxv4mwpd0e"]
 
 [ext_resource type="Script" uid="uid://c063wp0muftp8" path="res://ASSET/SCRIPT/player-controler.gd" id="1_dptqk"]
 [ext_resource type="Texture2D" uid="uid://dsv6bjh4pwmxg" path="res://ASSET/CHARACTER/idle.animation copy.png" id="2_dptqk"]
+[ext_resource type="Texture2D" uid="uid://ccabpiuthvjjf" path="res://ASSET/IMAGE/Untitled_Artwork-1.png" id="3_8hltt"]
+[ext_resource type="Texture2D" uid="uid://bxkm8urss4gy1" path="res://ASSET/IMAGE/Untitled_Artwork-2.png" id="4_y7onx"]
+[ext_resource type="Texture2D" uid="uid://dgf7rl7m1wxd3" path="res://ASSET/IMAGE/Untitled_Artwork-3.png" id="5_r4t3r"]
+[ext_resource type="Texture2D" uid="uid://c2ymum5le7lpr" path="res://ASSET/IMAGE/Untitled_Artwork-4.png" id="6_qvaoj"]
+[ext_resource type="Texture2D" uid="uid://dahwoj3bcqyt8" path="res://ASSET/IMAGE/Untitled_Artwork-5.png" id="7_3dt6t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r4ryh"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8hltt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y7onx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r4t3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qvaoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3dt6t")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6njfy"]
 radius = 27.0
@@ -28,6 +61,9 @@ region_enabled = true
 region_rect = Rect2(0, 0, 100, 300)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="animation"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_r4ryh")
+animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(14, 21)
