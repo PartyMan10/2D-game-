@@ -9,7 +9,10 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r4ryh"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8hltt")
+}],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
@@ -44,18 +47,18 @@ position = Vector2(0, -10)
 scale = Vector2(2.5427701, 2.3557742)
 script = ExtResource("1_dptqk")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.99999994, 0.99999994)
+offset = Vector2(0, -15)
+zoom = Vector2(0.8, 0.8)
+position_smoothing_speed = 8.0
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(21, -29)
 sprite_frames = SubResource("SpriteFrames_r4ryh")
-animation = &"walk"
-frame_progress = 0.3321267
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(20, -39)
 shape = SubResource("CapsuleShape2D_6njfy")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -15)
-zoom = Vector2(0.8, 0.8)
-position_smoothing_speed = 8.0
