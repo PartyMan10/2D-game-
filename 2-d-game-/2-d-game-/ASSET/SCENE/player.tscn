@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3yfxv4mwpd0e"]
+[gd_scene load_steps=9 format=3 uid="uid://b3yfxv4mwpd0e"]
 
 [ext_resource type="Script" uid="uid://c063wp0muftp8" path="res://ASSET/SCRIPT/player-controler.gd" id="1_dptqk"]
-[ext_resource type="Texture2D" uid="uid://dsv6bjh4pwmxg" path="res://ASSET/CHARACTER/idle.animation copy.png" id="2_dptqk"]
 [ext_resource type="Texture2D" uid="uid://ccabpiuthvjjf" path="res://ASSET/IMAGE/Untitled_Artwork-1.png" id="3_8hltt"]
 [ext_resource type="Texture2D" uid="uid://bxkm8urss4gy1" path="res://ASSET/IMAGE/Untitled_Artwork-2.png" id="4_y7onx"]
 [ext_resource type="Texture2D" uid="uid://dgf7rl7m1wxd3" path="res://ASSET/IMAGE/Untitled_Artwork-3.png" id="5_r4t3r"]
@@ -37,34 +36,24 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6njfy"]
-radius = 27.0
-height = 250.0
+radius = 23.0
+height = 90.0
 
 [node name="player" type="CharacterBody2D"]
 position = Vector2(0, -10)
 script = ExtResource("1_dptqk")
-speed = 20.0
-Jump_power = 5.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(21, -29)
+sprite_frames = SubResource("SpriteFrames_r4ryh")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, -39)
+shape = SubResource("CapsuleShape2D_6njfy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -15)
 zoom = Vector2(0.8, 0.8)
 position_smoothing_speed = 8.0
-
-[node name="animation" type="Node2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="animation"]
-position = Vector2(12.249996, 17.000008)
-scale = Vector2(0.75499994, 0.88)
-texture = ExtResource("2_dptqk")
-region_enabled = true
-region_rect = Rect2(0, 0, 100, 300)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="animation"]
-texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_r4ryh")
-animation = &"walk"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(14, 21)
-shape = SubResource("CapsuleShape2D_6njfy")
